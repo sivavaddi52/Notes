@@ -1,0 +1,48 @@
+##########EC2(Elastic Compute Cloud)####
+
+###### EC2 Instance Amazon Linux Launch ######
+
+
+Procedure:
+	1.First of all you had aws management console account. They don't know the account the create the account.
+	2.Then login in your account through your email and password.
+	3.You can search on to the search bar in EC2. You can seen in EC2 service, click on it.
+	4.Click on the launch instance button. You can navigate the launch instance page.
+	5.You had to fill the required details. It means EC2 instance name and select the Amazon machine image. We 	can generally call it has a AMI.Is used to select the operating systems what ever you required. It has 	more 	number of operating systems are built in you have to select any one of us. You had to select the 	64bit Amazon linux.
+	6.After you have to select the t3.micro in freetier. It is used to speed of the instance you are used in 	freetier version. You had only used for t3.micro only. But you are not using freetier you have to selected        	 their you want.
+	7.Next you have to select the key pair for existing one. You have do n't know the existing one key pair, 	click on to the create key pair button and fill the keypair name and select the .pem file extenstion.You 	had to select the created key pair.
+	8.If you had to select the networking part. It means you had to select the vpc and subnet.Ater you had to 	select the inbound rules for TCP and Http and Https rules you had  to select.
+	9.After you had to configure the storage and ram.If you're using free tier you had 30gb limit for storage,
+	If you had to configure the limit for 30gb.Then last you had create the tag or skip that thing and click 	on to the launch button. If you had to successfully launched the instance.
+	10.Tf you wait 4 minutes for launching the instance, After 4 minutes the instance will be set for 	launching.
+	11.Then select the instance in cliking the checkbox for that instance, click on to the connect button.Tf 	you select the EC2 connect and click on to the connect.You navigate the new page that is  noun another 	than launghing instance page it is amazon linux page.You had successfully connect your instance.
+
+
+#############Creating the webserver in EC2 For launching your own website ##############
+
+procedure:
+	1.Once your successfully connect your instance in amazon linux, It is linux operating system it means what 	ever do in through commands.
+	2.First of all you create one folder, that floder you have create your html and css fies for your own 	website.Then install the httpd for your operating system for creating the wed server. whatever files you 	had to created that files you had to move some location for creating webserver, then check the status for 	httpd.Initial state that webserver is inactive you had to activate your webserver, Then finally you have 	type your ip address to the new tab you get the your website is successfully hosted.
+	3.I can tell the step by step procedure for commands.
+
+
+	* yum update -y  ---This command  is used to update your system.
+	* yum install -y httpd  ----This command is used to install the httpd for creating web server.
+	* systemctl status httpd ----This command is used to check the status for httpd.Whether is active or not	* mkdir siva -----This command is used to create the directory means in simple words create a folder
+	* cd siva ---This command is used to navigate that directory for siva.
+	* pwd ----This command is used to know which directory your their.
+	* touch siva.html --Touch is used to create the file, I will create file named siva.html.
+	* cat > siva.html ----I can add some description for that siva.html for example i can write
+				Hello Guys,
+					Welcome to my official website, once again you are welcome
+	* ctrl+d  ----It is used to save that content what ever you write.
+	* cat siva.html ---It is used to visible that content for siva.html file.
+	* mv * /var/www/html/ ---It is used to move that files to the html file location.
+	* cd /var/www/html/ ---It is used to navigate that html location.	
+	* ls -lrt ----This command is used to list of files for exact directory.
+	* systemctl  enable httpd ---It is used to enable the httpd.
+	* systemctl start httpd ---It is used to active the httpd.
+	* systemctl status httpd --To check the status for httpd.
+	4.If you get the ip address for you instance in EC2 service.Then copy that ip address and past in new tab,
+	click on the enter.Finally you get your code is successfully hosting, You get that output.	
+	
