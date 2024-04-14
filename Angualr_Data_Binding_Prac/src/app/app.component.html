@@ -1,0 +1,50 @@
+<!-- string interpolation -->
+<h1>{{title}}</h1>
+
+<h2>{{test()}}</h2>
+
+<img src= {{siva}} alt="no img">
+
+
+<h3>{{D}}</h3>
+
+<h4>{{dat}}</h4>
+<h1>{{d}}</h1>
+
+<!-- property binding -->
+<img [src]= siva alt="no img"> 
+
+Name: <input type="text">
+<button [disabled]= disability() >Click it</button>
+
+phone: <input type="text">
+<button [hidden]="hide">Done</button>
+
+<!-- class binding -->
+
+<p [class]="isactive?'active':'inactive'">This is contrent</p>
+
+<p [class]="{c1:applic1,active:isactive}">Siva kumar</p>
+
+<p [class.c2]="another">This is another way for class binding</p>
+
+<!-- style binding -->
+<h1 [style]="{color:cvar}">Hello</h1>
+<h2 [style.color]="cvar">Im siva sai kuamr</h2>
+<h1 [style]="mystyle" >This is heading</h1>
+
+<!-- event Binding -->
+<button (click)="increment()">Click</button>
+<button (click)="decrement()">Decrement</button>
+<h1>Counter:{{count}}</h1>
+Name: <input type="text" (input)="Changename($event)">
+<h1>Your Name:{{name}}</h1>
+
+<!-- two way binding -->
+City: <input type="text" [(ngModel)]="city">
+<p>{{city}}</p>
+<button (click)="update()">Updated</button>
+
+
+
+

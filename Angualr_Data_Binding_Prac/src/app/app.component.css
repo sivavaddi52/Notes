@@ -1,0 +1,20 @@
+img{
+    height: 30%;
+    width: 30%;
+}
+.active{
+    background-color: aqua;
+    color: black;
+}
+.inactive{
+    background-color: black;
+    color: white;
+}
+.c1{
+    background-color: blue;
+    color: #fff;
+}
+.c2{
+    background-color: yellow;
+    color: #111;
+}
